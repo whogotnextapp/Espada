@@ -1,50 +1,169 @@
-# Welcome to your Expo app 👋
+(Who Got Next™ MVP)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Espada is the foundational codebase for the Who Got Next™ mobile app — a real-time pickup sports platform built with Expo + React Native and designed for scalability across iOS and Android.
 
-## Get started
+This codebase is focused on:
 
-1. Install dependencies
+🎮 Real-time basketball & pickleball game discovery
 
-   ```bash
-   npm install
-   ```
+🗺️ Player location map (Google Maps / Apple MapKit)
 
-2. Start the app
+🧪 “The Lab” coaching content (influencers, creators, trainers)
 
-   ```bash
-   npx expo start
-   ```
+🎵 Deep-linked Spotify playlists
 
-In the output, you'll find options to open the app in a
+▶️ Deep-linked YouTube podcast integration
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+💬 Messaging + DMs (Firestore-backed)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+🔐 Firebase Auth (Email, Google, Apple)
 
-## Get a fresh project
+🔥 Firestore real-time data
 
-When you're ready, run:
+🎁 Profile tab with premium, loot boxes, and merch
 
-```bash
-npm run reset-project
-```
+📈 Wearable data + court heatmaps (future)
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+🚀 Tech Stack
+Frontend
 
-## Learn more
+React Native (Expo)
 
-To learn more about developing your project with Expo, look at the following resources:
+React Navigation
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Expo Maps (Google / Apple MapKit)
 
-## Join the community
+Deep linking (Spotify + YouTube)
 
-Join our community of developers creating universal apps.
+Dark Mode UI theme
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Backend
+
+Firebase Authentication
+
+Firebase Firestore
+
+Firebase Storage
+
+📂 Project Structure
+Espada/
+  App.tsx
+  babel.config.js
+  package.json
+  app.json
+
+  src/
+    screens/
+      LabScreen.tsx
+      MusicScreen.tsx
+      YoutubeScreen.tsx
+      MapScreen.tsx
+      InboxScreen.tsx
+      ProfileScreen.tsx
+      SettingsScreen.tsx
+
+    navigation/
+      RootTabs.tsx
+
+    context/
+      AuthContext.tsx
+      PlayerContext.tsx
+      GameContext.tsx
+
+    services/
+      firebase/
+        firebaseConfig.ts
+      index.ts
+
+    theme/
+      colors.ts
+      theme.ts
+
+    components/
+      README.md
+
+🏁 Getting Started
+
+Install dependencies:
+
+npm install
+
+
+Run the project:
+
+npx expo start
+
+
+To open the app:
+
+Press i for iOS Simulator
+
+Press a for Android
+
+Or scan the QR code using Expo Go on your device
+
+🎨 Branding
+
+The app uses the Who Got Next™ brand color palette:
+
+Vibrant Orange — #F78A3A
+
+Deep Red — #EE3D2C
+
+Dark Gray / Black — #2A2A2A
+
+White — #FFFFFF
+
+Light Gray — #E6E6E6
+
+Splash and icon assets live in /assets.
+
+📦 Feature Roadmap
+MVP Phase
+
+Fix App entrypoint + boot navigation
+
+Add Firebase Authentication
+
+Add Firestore profile creation
+
+Integrate Map with real court discovery
+
+Add player avatar presets
+
+Build friend system + DMs
+
+Add game creation + result confirmation logic
+
+Phase 2
+
+Heatmaps (court activity levels)
+
+Wearable integration (Smartwatch to detect real games)
+
+Premium subscriptions
+
+In-app currency + challenges
+
+Live scorekeeping
+
+Skill ranking and anti-collusion engine
+
+🤝 Contributing
+
+This repo will support your internal dev team (CTO + Uruguay team).
+Code should follow:
+
+Consistent formatting
+
+Avoid Expo Router
+
+Keep navigation inside App.tsx + src/navigation
+
+Keep screens modular under /screens
+
+PRs welcome once the project stabilizes.
+
+⚖️ License
+
+Private — All rights reserved. Who Got Next™ / Espada.
